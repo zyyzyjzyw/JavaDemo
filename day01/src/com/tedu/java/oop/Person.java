@@ -3,21 +3,27 @@ package com.tedu.java.oop;
 /**
  * @ClassName Person
  * @Author Administrator
- * @Date 2023/11/8 19:45
+ * @Date 2023/11/11 11:26
  * @Version 1.0
  * @Description TODO
  **/
-public class Person {
-    String name;// 姓名
-    int age;//年龄
-    char gender;//性别
-    public void eat(){
-        System.out.println("人吃饭");
+class Person {
+    // 属性
+    String name; // 姓名
+    int age; // 年龄
+    boolean isMale; // 是否是男性
+
+    public void show(String nation){
+        // nation 局部变量
+        String color; // 局部变量
+        color = "yellow";
     }
-    public void sleep(int hour){
-        System.out.println("人至少保证每天"+hour+"小时的睡眠");
-    }
-    public void interests(String hobby){
-        System.out.println("我的爱好是"+hobby);
+
+    // 测试类
+    static class PersonTest{
+        public static void main(String[] args) {
+            Person p = new Person();
+            p.show("CHN");
+        }
     }
 }
